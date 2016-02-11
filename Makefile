@@ -5,7 +5,7 @@
 ## Login   <blanch_p@epitech.net>
 ## 
 ## Started on  Wed Nov 11 18:01:44 2015 Alexandre Blanchard
-## Last update Tue Feb  9 11:42:54 2016 Alexandre Blanchard
+## Last update Thu Feb 11 13:08:10 2016 Alexandre Blanchard
 ##
 
 NAME		=	allum1
@@ -18,7 +18,7 @@ SRC		=	allum.c \
 
 OBJ		=	$(SRC:.c=.o)
 
-CFLAGS		=	-W -Wall -ansi -pedantic #-Werror
+CFLAGS		=	-W -Wall -ansi -pedantic -g #-Werror
 
 LDFLAGS		=	-I./include
 
@@ -28,7 +28,7 @@ LDFLAGS		=	-I./include
 all:			$(NAME)
 
 $(NAME):		$(OBJ)	
-			gcc $(OBJ) -lmy -L. -o $(NAME) -g
+			gcc $(OBJ) -lmy -L. -o $(NAME)
 
 clean:
 			rm -f $(OBJ)

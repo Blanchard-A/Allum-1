@@ -5,33 +5,45 @@
 ** Login   <blanch_p@epitech.net>
 ** 
 ** Started on  Tue Feb  9 09:47:37 2016 Alexandre Blanchard
-** Last update Tue Feb  9 12:09:47 2016 Alexandre Blanchard
+** Last update Thu Feb 11 13:20:50 2016 Alexandre Blanchard
 */
 
 #include "allum.h"
 
-int	verif_line(int nb, char **all)
+int	check_empty(int nombre, char **all, int line)
 {
   int	i;
-  int	nombre;
 
   i = 0;
   nombre = 0;
-  if (nb < 1 || nb > 4)
+  while (all[line][i])
+    {
+      if (all[line][i] == '|')
+	nombre++;
+      i++;
+    }
+  return (nombre);
+}
+
+int	verif_line(int nb, char **all)
+{
+  int	nombre;
+
+  nombre = 0;
+  if (nb == 0 || nb > 4)
     {
       my_printf("Error: this line is out of range\n");
       player(all);
       return (0);
     }
-  else
+  else if (nb < 0)
     {
-      while (all[nb][i])
-	{
-	  if (all[nb][i] == '|')
-	    nombre++;
-	  i++;
-	}
+      my_printf("Error: invalid input (positive number expected)\n");
+      player(all);
+      return (0);
     }
+  else
+    nombre = check_empty(nombre, all, nb);
   if (nombre == 0)
     {
       my_printf("Error: this line is empty\n");
@@ -43,21 +55,23 @@ int	verif_line(int nb, char **all)
 
 int	verif_matches(int nb, int line, char **all)
 {
-  int	i;
   int	matches;
 
-  if (nb < 1)
+  matches = 0;
+  if (nb == 0)
     {
       my_printf("Error: you have to remove at least one match\n");
       player(all);
       return (0);
     }
-  while (all[line][i] != '\0')
+  else if (nb < 0)
     {
-      if (all[line][i] == '|')
-	matches++;
-      i++;
+      my_printf("Error: invalid input (positive number expected)\n");
+      player(all);
+      return (0);
     }
+  else
+    matches = check_empty(matches, all, line);
   if (matches < nb)
     {
       my_printf("Error: not enough match(es) on this line\n");
