@@ -5,7 +5,7 @@
 ** Login   <blanch_p@epitech.net>
 ** 
 ** Started on  Sun Jan 17 11:44:42 2016 Alexandre Blanchard
-** Last update Sun Jan 17 22:33:44 2016 Alexandre Blanchard
+** Last update Mon Feb  8 14:44:55 2016 Alexandre Blanchard
 */
 
 #include "get_next_line.h"
@@ -92,8 +92,7 @@ char		*get_next_line(const int fd)
   n.ret = 0;
   n.buf = in_buffer(incr2, n.buf, tmp);
   incr2 = 0;
-  while (check(n.buf, size + n.ret) ==  0 &&
-	 (n.ret = read(fd, n.buf + size - READ_SIZE, READ_SIZE)) == READ_SIZE
+  while ((n.ret = read(fd, n.buf + size - READ_SIZE, READ_SIZE)) == READ_SIZE
 	 && check(n.buf, size + n.ret) ==  0)
     {
       if ((n.buf = my_realloc(n.buf, size + n.ret)) == NULL)
