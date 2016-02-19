@@ -5,7 +5,7 @@
 ** Login   <blanch_p@epitech.net>
 ** 
 ** Started on  Mon Feb  8 10:06:51 2016 Alexandre Blanchard
-** Last update Fri Feb 19 13:27:26 2016 Alexandre Blanchard
+** Last update Fri Feb 19 14:45:15 2016 Alexandre Blanchard
 */
 
 #include "allum.h"
@@ -15,17 +15,14 @@ int	choose_hard()
   char	**all;
   int	turn;
   int	finish;
-  
+
   finish = 0;
   all = NULL;
-  /* s = malloc(sizeof(char) * 1); */
   if ((all = create_tab(all)) == NULL)
     return (-1);
   aff_double_tab_hard(all);
   while (finish == 0)
     {
-      /* s = get_next_line(0); */
-      /* difficult = my_getnbr(s); */
       turn = who_plays();
       if (turn % 2 == 1)
 	player_2(all);
@@ -33,7 +30,7 @@ int	choose_hard()
 	tab_ia_hard(all);
       finish = verif_win(all, turn % 2);
     }
-  return (1);  
+  return (1);
 }
 
 int	choose_easy()
@@ -41,17 +38,14 @@ int	choose_easy()
   char	**all;
   int	turn;
   int	finish;
-  
+
   finish = 0;
   all = NULL;
-  /* s = malloc(sizeof(char) * 1); */
   if ((all = create_tab(all)) == NULL)
     return (-1);
   aff_double_tab_easy(all);
   while (finish == 0)
     {
-      /* s = get_next_line(0); */
-      /* difficult = my_getnbr(s); */
       turn = who_plays();
       if (turn % 2 == 1)
 	player_1(all);
@@ -64,17 +58,12 @@ int	choose_easy()
 
 int	main()
 {
-  /* char	**all; */
-  /* int	turn; */
   int	finish;
   char	*s;
   int	difficult;
-  
+
   finish = 0;
-  /* all = NULL; */
   s = malloc(sizeof(char) * 1);
-  /* if ((all = create_tab(all)) == NULL) */
-  /*   return (-1); */
   my_printf("\033[0;32m1 for EASY\033[0m | ");
   my_printf("\033[0;31m2 for HARD\033[0m\nYour choice: ");
   while (finish == 0)

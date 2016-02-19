@@ -5,7 +5,7 @@
 ** Login   <blanch_p@epitech.net>
 ** 
 ** Started on  Mon Feb  8 12:11:15 2016 Alexandre Blanchard
-** Last update Fri Feb 19 13:26:43 2016 Alexandre Blanchard
+** Last update Fri Feb 19 14:48:44 2016 Alexandre Blanchard
 */
 
 #include "allum.h"
@@ -86,63 +86,4 @@ char	**malloc_tab(char **all)
       i++;
     }
   return (all);
-}
-
-int	aff_double_tab_easy(char **all)
-{
-  int	i;
-  int	j;
-  
-  i = 0;
-  printf("easy\n");
-  while (all[i] != NULL)
-    {
-      j = 0;
-      if (i == 0 || i == 5)
-	my_printf("\033[0;32m%s\033[0m\n", all[i]);
-      else
-	{
-	  while (all[i][j])
-	    {
-	      if (j == 0 || j == 8)
-		my_printf("\033[0;32m%c\033[0m", all[i][j]);
-	      else
-		my_printf("%c", all[i][j]);
-	      j++;
-	    }
-	  my_printf("\n");
-	}
-      i++;
-    }
-  my_printf("\n");
-  return (0);
-}
-
-int	aff_double_tab_hard(char **all)
-{
-  int	i;
-  int	j;
-  
-  i = 0;
-  while (all[i] != NULL)
-    {
-      j = 0;
-      if (i == 0 || i == 5)
-	my_printf("\033[0;31m%s\033[0m\n", all[i]);
-      else
-	{
-	  while (all[i][j])
-	    {
-	      if (j == 0 || j == 8)
-		my_printf("\033[0;31m%c\033[0m", all[i][j]);
-	      else
-		my_printf("%c", all[i][j]);
-	      j++;
-	    }
-	  my_printf("\n");
-	}
-      i++;
-    }
-  my_printf("\n");
-  return (0);
 }

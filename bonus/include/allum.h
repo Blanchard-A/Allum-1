@@ -5,7 +5,7 @@
 ** Login   <blanch_p@epitech.net>
 ** 
 ** Started on  Mon Feb  8 11:49:12 2016 Alexandre Blanchard
-** Last update Fri Feb 19 13:17:05 2016 Alexandre Blanchard
+** Last update Fri Feb 19 14:42:09 2016 Alexandre Blanchard
 */
 
 #ifndef ALLUM_H_
@@ -43,8 +43,10 @@ int	aff_double_tab_easy(char **);
 int	aff_double_tab_hard(char **);
 /*verif.c*/
 int	check_empty(int, char **, int);
-int	verif_line(int, char **);
-int	verif_matches(int, int, char **);
+int	verif_line_1(int, char **);
+int	verif_line_2(int, char **);
+int	verif_matches_1(int, int, char **);
+int	verif_matches_2(int, int, char **);
 char	**change_tab_1(int, int, char **, int);
 char	**change_tab2(int, int, char **, int);
 int	how_many_matches(char **);

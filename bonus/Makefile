@@ -5,7 +5,7 @@
 ## Login   <blanch_p@epitech.net>
 ## 
 ## Started on  Wed Nov 11 18:01:44 2015 Alexandre Blanchard
-## Last update Fri Feb 19 11:48:03 2016 Alexandre Blanchard
+## Last update Fri Feb 19 14:50:14 2016 Alexandre Blanchard
 ##
 
 NAME		=	allum1
@@ -14,8 +14,10 @@ SRC		=	allum.c \
 			player.c \
 			tab.c \
 			ia_hard.c \
-			verif.c \
-			ia.c
+			verif_1.c \
+			verif_2.c \
+			ia.c \
+			affich.c
 
 OBJ		=	$(SRC:.c=.o)
 
