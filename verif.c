@@ -5,7 +5,7 @@
 ** Login   <blanch_p@epitech.net>
 ** 
 ** Started on  Tue Feb  9 09:47:37 2016 Alexandre Blanchard
-** Last update Thu Feb 11 13:20:50 2016 Alexandre Blanchard
+** Last update Fri Feb 19 14:56:36 2016 Alexandre Blanchard
 */
 
 #include "allum.h"
@@ -124,23 +124,4 @@ int	how_many_matches(char **all)
       j++;
     }
   return (nb);
-}
-
-int	verif_win(char **all, int player)
-{
-  int	nb;
-
-  nb = 0;
-  nb = how_many_matches(all);
-  if (nb == 0 && player == 0)
-    {
-      my_printf("I lost.. snif.. but I'll get you next time!!\n");
-      return (1);
-    }
-  if (nb == 0 && player == 1)
-    {
-      my_printf("You lost, too bad..\n");
-      return (1);
-    }
-  return (0);
 }

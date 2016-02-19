@@ -5,7 +5,7 @@
 ## Login   <blanch_p@epitech.net>
 ## 
 ## Started on  Wed Nov 11 18:01:44 2015 Alexandre Blanchard
-## Last update Fri Feb 19 14:50:14 2016 Alexandre Blanchard
+## Last update Fri Feb 19 14:58:01 2016 Alexandre Blanchard
 ##
 
 NAME		=	allum1
@@ -21,7 +21,7 @@ SRC		=	allum.c \
 
 OBJ		=	$(SRC:.c=.o)
 
-CFLAGS		=	-W -Wall -ansi -pedantic -g #-Werror
+CFLAGS		=	-W -Wall -ansi -pedantic -Werror
 
 LDFLAGS		=	-I./include
 

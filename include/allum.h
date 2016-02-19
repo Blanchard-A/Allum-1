@@ -5,7 +5,7 @@
 ** Login   <blanch_p@epitech.net>
 ** 
 ** Started on  Mon Feb  8 11:49:12 2016 Alexandre Blanchard
-** Last update Tue Feb  9 12:05:49 2016 Alexandre Blanchard
+** Last update Fri Feb 19 14:57:32 2016 Alexandre Blanchard
 */
 
 #ifndef ALLUM_H_
@@ -33,7 +33,7 @@ char	**tab_ia(char **);
 int	verif_win(char **, int);
 char	**player(char **);
 int	who_plays();
-
+int	how_many_matches(char **);
 int	my_getnbr(char *);
 
 #endif /* ALLUM_H_ */
