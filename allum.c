@@ -5,7 +5,7 @@
 ** Login   <blanch_p@epitech.net>
 ** 
 ** Started on  Mon Feb  8 10:06:51 2016 Alexandre Blanchard
-** Last update Fri Feb 19 11:37:20 2016 Alexandre Blanchard
+** Last update Fri Feb 19 15:07:20 2016 Alexandre Blanchard
 */
 
 #include "allum.h"
@@ -25,7 +25,8 @@ int	main()
     {
       turn = who_plays();
       if (turn % 2 == 1)
-	player(all);
+	if (player(all) == NULL)
+	  return (NULL);
       if (turn % 2 == 0)
 	tab_ia(all);
       finish = verif_win(all, turn % 2);

@@ -5,7 +5,7 @@
 ** Login   <blanch_p@epitech.net>
 ** 
 ** Started on  Mon Feb  8 11:49:12 2016 Alexandre Blanchard
-** Last update Fri Feb 19 14:42:09 2016 Alexandre Blanchard
+** Last update Sat Feb 20 10:13:49 2016 Alexandre Blanchard
 */
 
 #ifndef ALLUM_H_
@@ -23,6 +23,7 @@ typedef struct	s_xor
   int		line_2;
   int		line_3;
   int		line_4;
+  int		somme_matches;
   int		somme;
   int		l_1;
   int		l_2;

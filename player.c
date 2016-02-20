@@ -5,7 +5,7 @@
 ** Login   <blanch_p@epitech.net>
 ** 
 ** Started on  Mon Feb  8 11:54:51 2016 Alexandre Blanchard
-** Last update Thu Feb 11 13:38:04 2016 Alexandre Blanchard
+** Last update Fri Feb 19 15:04:40 2016 Alexandre Blanchard
 */
 
 #include "allum.h"
@@ -60,14 +60,17 @@ char	**player(char **all)
   int	check_mat;
 
   my_printf("Line: ");
-  s = get_next_line(0);
+  if ((s = get_next_line(0)) == NULL)
+    return (NULL);
   check_line = check_good_entry(s, all);
   if (check_line != 0)
     line = verif_line(my_getnbr(s), all);
   if (line != 0)
     {
       my_printf("Matches: ");
-      s = get_next_line(0);
+      if ((s = get_next_line(0)) == NULL)
+	return (NULL);
+      printf("s = %s\n");
       check_mat = check_good_entry(s, all);
       if (check_mat != 0)
 	matches = verif_matches(my_getnbr(s), line, all);

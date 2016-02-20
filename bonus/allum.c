@@ -5,7 +5,7 @@
 ** Login   <blanch_p@epitech.net>
 ** 
 ** Started on  Mon Feb  8 10:06:51 2016 Alexandre Blanchard
-** Last update Fri Feb 19 14:45:15 2016 Alexandre Blanchard
+** Last update Sat Feb 20 18:09:15 2016 Alexandre Blanchard
 */
 
 #include "allum.h"
@@ -25,7 +25,8 @@ int	choose_hard()
     {
       turn = who_plays();
       if (turn % 2 == 1)
-	player_2(all);
+	if (player_2(all) == NULL)
+	  return (-1);
       if (turn % 2 == 0)
 	tab_ia_hard(all);
       finish = verif_win(all, turn % 2);
@@ -48,7 +49,8 @@ int	choose_easy()
     {
       turn = who_plays();
       if (turn % 2 == 1)
-	player_1(all);
+	if (player_1(all) == NULL)
+	  return (-1);
       if (turn % 2 == 0)
 	tab_ia(all);
       finish = verif_win(all, turn % 2);
@@ -66,9 +68,10 @@ int	main()
   s = malloc(sizeof(char) * 1);
   my_printf("\033[0;32m1 for EASY\033[0m | ");
   my_printf("\033[0;31m2 for HARD\033[0m\nYour choice: ");
-  while (finish == 0)
+  while (finish == 0 || finish == -1)
     {
-      s = get_next_line(0);
+      if ((s = get_next_line(0)) == NULL)
+	return (-1);
       difficult = my_getnbr(s);
       if (difficult == 1)
 	finish = choose_easy();
