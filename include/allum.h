@@ -1,11 +1,11 @@
 /*
 ** allum.h for allum in /home/blanch_p/Prog_elem/CPE_2015_Allum1/include
-** 
+**
 ** Made by Alexandre Blanchard
 ** Login   <blanch_p@epitech.net>
-** 
+**
 ** Started on  Mon Feb  8 11:49:12 2016 Alexandre Blanchard
-** Last update Fri Feb 19 14:57:32 2016 Alexandre Blanchard
+** Last update Tue Jun  7 15:28:03 2016 Alexandre Blanchard
 */
 
 #ifndef ALLUM_H_
@@ -14,8 +14,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include "../src/printf.h"
-#include "../src/get_next_line.h"
+#include "printf.h"
+#include "get_next_line.h"
 
 char	**rempli_star(char **);
 char	**rempli_tab(char **);

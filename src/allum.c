@@ -5,7 +5,7 @@
 ** Login   <blanch_p@epitech.net>
 ** 
 ** Started on  Mon Feb  8 10:06:51 2016 Alexandre Blanchard
-** Last update Fri Feb 19 15:07:20 2016 Alexandre Blanchard
+** Last update Wed Feb 24 17:43:04 2016 Alexandre Blanchard
 */
 
 #include "allum.h"
@@ -21,12 +21,13 @@ int	main()
   if ((all = create_tab(all)) == NULL)
     return (-1);
   aff_double_tab(all);
+  my_printf("\n");
   while (finish == 0)
     {
       turn = who_plays();
       if (turn % 2 == 1)
 	if (player(all) == NULL)
-	  return (NULL);
+	  return (-1);
       if (turn % 2 == 0)
 	tab_ia(all);
       finish = verif_win(all, turn % 2);

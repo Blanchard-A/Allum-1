@@ -5,7 +5,7 @@
 ** Login   <blanch_p@epitech.net>
 ** 
 ** Started on  Fri Feb 19 14:55:01 2016 Alexandre Blanchard
-** Last update Fri Feb 19 14:56:16 2016 Alexandre Blanchard
+** Last update Wed Feb 24 17:46:57 2016 Alexandre Blanchard
 */
 
 #include "allum.h"
@@ -26,5 +26,6 @@ int	verif_win(char **all, int player)
       my_printf("You lost, too bad..\n");
       return (1);
     }
+  my_printf("\n");
   return (0);
 }

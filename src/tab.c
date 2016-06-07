@@ -5,7 +5,7 @@
 ** Login   <blanch_p@epitech.net>
 ** 
 ** Started on  Mon Feb  8 12:11:15 2016 Alexandre Blanchard
-** Last update Tue Feb  9 14:46:57 2016 Alexandre Blanchard
+** Last update Thu Feb 25 10:28:32 2016 Alexandre Blanchard
 */
 
 #include "allum.h"
@@ -98,6 +98,5 @@ int	aff_double_tab(char **all)
       my_printf("%s\n", all[i]);
       i++;
     }
-  my_printf("\n");
   return (0);
  }

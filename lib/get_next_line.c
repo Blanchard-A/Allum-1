@@ -5,7 +5,7 @@
 ** Login   <blanch_p@epitech.net>
 ** 
 ** Started on  Sun Jan 17 11:44:42 2016 Alexandre Blanchard
-** Last update Mon Feb  8 14:44:55 2016 Alexandre Blanchard
+** Last update Thu Feb 25 10:29:11 2016 Alexandre Blanchard
 */
 
 #include "get_next_line.h"
@@ -102,5 +102,7 @@ char		*get_next_line(const int fd)
   in_tmp(tmp, n.buf, &incr2, size);
   if (n.ret == 0 && size == READ_SIZE)
     return (NULL);
+  if (n.buf[0] == '\0')
+    return ("\n");
   return (n.buf);
 }

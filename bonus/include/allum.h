@@ -1,11 +1,11 @@
 /*
 ** allum.h for allum in /home/blanch_p/Prog_elem/CPE_2015_Allum1/include
-** 
+**
 ** Made by Alexandre Blanchard
 ** Login   <blanch_p@epitech.net>
-** 
+**
 ** Started on  Mon Feb  8 11:49:12 2016 Alexandre Blanchard
-** Last update Sat Feb 20 10:13:49 2016 Alexandre Blanchard
+** Last update Tue Jun  7 15:30:43 2016 Alexandre Blanchard
 */
 
 #ifndef ALLUM_H_
@@ -14,8 +14,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include "../src/printf.h"
-#include "../src/get_next_line.h"
+#include "printf.h"
+#include "get_next_line.h"
 
 typedef struct	s_xor
 {
@@ -32,7 +32,7 @@ typedef struct	s_xor
   int		line_enl;
   int		matches;
   int		line;
-  
+
 }		t_xor;
 
 /*tab.c*/

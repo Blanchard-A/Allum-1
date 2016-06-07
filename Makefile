@@ -5,21 +5,21 @@
 ## Login   <blanch_p@epitech.net>
 ## 
 ## Started on  Wed Nov 11 18:01:44 2015 Alexandre Blanchard
-## Last update Fri Feb 19 15:03:21 2016 Alexandre Blanchard
+## Last update Tue Jun  7 15:28:20 2016 Alexandre Blanchard
 ##
 
 NAME		=	allum1
 
-SRC		=	allum.c \
-			player.c \
-			tab.c \
-			ia.c \
-			verif.c \
-			win.c
+SRC		=	src/allum.c \
+			src/player.c \
+			src/tab.c \
+			src/ia.c \
+			src/verif.c \
+			src/win.c
 
 OBJ		=	$(SRC:.c=.o)
 
-CFLAGS		=	-W -Wall -ansi -pedantic #-Werror
+CFLAGS		=	-W -Wall -ansi -pedantic -Werror -Iinclude
 
 LDFLAGS		=	-I./include
 
